@@ -1,4 +1,4 @@
-Lab 6 - TFX Iterative Schema with Custom Modifications
+## Lab 6 - TFX Iterative Schema with Custom Modifications
 
 ## Overview
 This lab demonstrates how to work with iterative schema development using TensorFlow Extended (TFX) and ML Metadata. This is a modified version of the original Jupyter notebook lab, converted to a modular Python project with custom enhancements for better understanding and practical application.
@@ -41,8 +41,9 @@ Lab6/
 │   └── census_data/
 │       └── adult.data       # Census Income dataset
 └── pipeline/                # Pipeline artifacts (auto-generated)
- Quick Start
-Prerequisites
+
+
+# Prerequisites
 
 Python 3.7+
 TensorFlow 2.x
