@@ -1,6 +1,6 @@
 Lab 6 - TFX Iterative Schema with Custom Modifications
 
-Overview
+## Overview
 This lab demonstrates how to work with iterative schema development using TensorFlow Extended (TFX) and ML Metadata. This is a modified version of the original Jupyter notebook lab, converted to a modular Python project with custom enhancements for better understanding and practical application.
  Key Modifications Made
  Structure & Format Changes
@@ -10,7 +10,7 @@ VS Code compatible project structure
 Separated concerns into different modules
 Added comprehensive error handling and logging
 
- Enhanced Features
+# Enhanced Features
 
 Custom age validation (restricted to 17-90 years instead of default)
 Enhanced schema management with additional validations
@@ -18,14 +18,15 @@ Automated pipeline execution with better control flow
 Improved metadata tracking capabilities
 Schema visualization enhancements
 
- Code Quality Improvements
+# Code Quality Improvements
 
 Modular architecture for better maintainability
 Professional logging system
 Error handling throughout the pipeline
 Documentation and type hints
 
-📂 Project Structure
+# Project Structure
+
 Lab6/
 ├── README.md                  # This file
 ├── requirements.txt           # Python dependencies
@@ -47,7 +48,7 @@ Python 3.7+
 TensorFlow 2.x
 Git
 
-Installation & Setup
+# Installation & Setup
 bash# 1. Clone the repository
 git clone https://github.com/uXmii/Lab6.git
 cd Lab6
@@ -145,6 +146,7 @@ Size: ~32K records with 15 attributes
  Custom Modifications Implemented
 1. Enhanced Age Validation
 python# Original: No domain restrictions
+
 # Modified: Age restricted to realistic range
 tfdv.set_domain(schema, 'age', schema_pb2.IntDomain(name='age', min=17, max=90))
 2. Environment Configuration
@@ -164,7 +166,7 @@ Separated into logical modules
 Better code organization
 Reusable components
 
- Pipeline Execution Flow
+# Pipeline Execution Flow
 mermaidgraph TD
     A[Raw Data] --> B[ExampleGen]
     B --> C[StatisticsGen]
@@ -177,7 +179,8 @@ mermaidgraph TD
     
     style E fill:#f9f,stroke:#333,stroke-width:2px
     style H fill:#9f9,stroke:#333,stroke-width:2px
-Learning Objectives
+    
+# Learning Objectives
 
  TFX pipeline components and their interactions
  Schema inference and customization techniques
@@ -186,25 +189,15 @@ Learning Objectives
  Pipeline orchestration best practices
  Environment management for training vs serving
 
- Troubleshooting
+# Troubleshooting
 Common Issues & Solutions
 IssueCauseSolutionImport ErrorsMissing dependenciespip install -r requirements.txtData Not FoundDataset missingDownload from UCI ML RepositoryPermission ErrorsFile access issuesCheck file/directory permissionsMemory IssuesLarge datasetUse smaller sample for testingTFX Version ConflictsVersion mismatchUse specified versions in requirements.txt
 Dataset Download
 If automatic download fails:
 bash# Manual download
 wget https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data -O data/census_data/adult.data
- Assignment Requirements Met
- Submit 1 lab from available labs folders
- Submission format: GitHub repo link
- Make modifications: Added custom changes (not identical to repo)
 
-Different dataset handling approach
-Enhanced schema validation
-Modular code structure
-VS Code compatibility
-Additional error handling
-
- Future Enhancements
+# Future Enhancements
 Potential improvements for further learning:
 
  Add Transform component for feature engineering
